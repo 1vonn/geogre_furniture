@@ -1,0 +1,57 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+model Users{
+  id String @id @default(uuid())
+  userEmail String @unique @map("user_Email")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@map("Users_table")
+}
+
+
+
+
+model Client {
+  id        String    @id @default(uuid())
+  fullName  String    @map("full_Name")
+  email     String    @unique
+  // orders    Order[]   @relation("ClientOrders") // Define the relation name here
+  createdAt DateTime  @default(now()) @map("created_At")
+  updatedAt DateTime  @updatedAt @map("updated_At")
+
+  @@map("Client_table")
+}
+
+model Order {
+  id               String    @id @default(uuid())
+  // client           Client    @relation(name: "OrderToClient", fields: [clientId], references: [id])
+  // clientId         String    @map("client_Id")
+  fullName         String    @map("full_Name")
+  email            String    @map("email") @unique
+  phoneNumber      Int       @unique @map("phone_Number")
+  deliveryLocation String    @map("delivery_Location")
+  categoryType     String    @map("category_Type")
+  createdAt        DateTime  @default(now())
+  updatedAt        DateTime  @updatedAt
+
+  @@map("Orders_table")
+}
+model Newsletter{
+  id String @id @default(uuid())
+  userEmail String @unique @map("user_Email")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@map("Newsletter_table")
+}
