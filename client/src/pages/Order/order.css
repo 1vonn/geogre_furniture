@@ -1,0 +1,16 @@
+
+    .order-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px; /* Space between the components */
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    
+    @media (min-width: 768px) {
+        .order-content {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+    

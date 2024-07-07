@@ -1,0 +1,38 @@
+.products-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px;
+    padding: 16px;
+}
+
+.product-content-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 16px;
+    background-color: rgb(217, 217, 217);
+}
+
+.product-content-items img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.shop-name {
+    font-weight: bold;
+    font-size: 20px;
+    margin: 8px 0;
+    color: black;
+}
+
+.shop-price {
+    color:black;
+    margin: 8px 0;
+}
+
+.item-description {
+    margin: 8px 0;
+}

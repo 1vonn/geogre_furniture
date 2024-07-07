@@ -1,0 +1,36 @@
+.location-content{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+}
+.offices{
+    flex: 1;
+    padding: 20px;
+    border-radius: 8px;
+    background-color:rgb(233, 172, 6) ;
+    margin-bottom: 20px;
+}
+.icon{
+font-size: 25px;
+}
+.offices p{
+    text-align: center;
+    font-size: 18px;
+    color: black;
+}
+.offices h2{
+    font-size: 24px;
+    text-align: center;
+    color: black;
+}
+.map{
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    height: 64vh;
+    
+}

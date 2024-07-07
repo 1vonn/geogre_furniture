@@ -1,0 +1,70 @@
+.newsletter-container {
+    width: 100%;
+    max-width: 1000px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    background-color: rgb(217 217 217);
+    margin-top: 10px;
+}
+.newsletter-container h2 {
+    margin-bottom: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    color: black;
+    text-align: center;
+}
+
+.newsletter-container form  {
+    margin-bottom: 15px;
+    
+}
+
+.newsletter-container form input[type="email"],
+button {
+    width: 50%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+
+}
+
+
+.newsletter-container form button {
+    background-color:  rgb(233, 172, 6);
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 24px;
+}
+
+button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+}
+
+.success {
+    color: green;
+    margin-top: 20px;
+}
+
+.error {
+    color: red;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .newsletter-container {
+        width: 80%;
+    }
+
+    input[type="email"],
+    button {
+        width: 50%;
+    }
+}
